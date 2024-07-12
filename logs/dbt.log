@@ -1248,3 +1248,279 @@ drop view if exists "postgres"."public"."dw_faturamento_model__dbt_backup" casca
 [0m11:44:20.087222 [debug] [MainThread]: Command `dbt run` succeeded at 11:44:20.086775 after 11.40 seconds
 [0m11:44:20.088729 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7328169a20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f73263b4be0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7327e2cac0>]}
 [0m11:44:20.090497 [debug] [MainThread]: Flushing usage events
+[0m12:04:38.127247 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f00ddccd9c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f00dd9bbf40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f00dcb03430>]}
+
+
+============================== 12:04:38.137477 | d5011cdf-39a8-4f93-af36-e929f68fdcb4 ==============================
+[0m12:04:38.137477 [info ] [MainThread]: Running with dbt=1.9.0-a1
+[0m12:04:38.139053 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/home/melojleo/data_engineer/projects/dbt-airbyte-etl/logs', 'profiles_dir': '/home/melojleo/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m12:04:38.747282 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd5011cdf-39a8-4f93-af36-e929f68fdcb4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f00dbf4ceb0>]}
+[0m12:04:38.909818 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd5011cdf-39a8-4f93-af36-e929f68fdcb4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f00dcd86830>]}
+[0m12:04:38.912182 [info ] [MainThread]: Registered adapter: postgres=1.9.0-a1
+[0m12:04:38.957391 [debug] [MainThread]: checksum: aac0c6cfaaad300ec6bfdf1baf43042b53fa12baa972002c965876e23dc9f4ab, vars: {}, profile: , target: , version: 1.9.0a1
+[0m12:04:39.212669 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m12:04:39.214668 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'd5011cdf-39a8-4f93-af36-e929f68fdcb4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f00dd2cab60>]}
+[0m12:04:41.902965 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.dbt_airbyte_etl.example
+[0m12:04:41.915061 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd5011cdf-39a8-4f93-af36-e929f68fdcb4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f00daf48130>]}
+[0m12:04:42.153581 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd5011cdf-39a8-4f93-af36-e929f68fdcb4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f00daf3d360>]}
+[0m12:04:42.155086 [info ] [MainThread]: Found 2 models, 415 macros
+[0m12:04:42.156147 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd5011cdf-39a8-4f93-af36-e929f68fdcb4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f00daf3df30>]}
+[0m12:04:42.160480 [info ] [MainThread]: 
+[0m12:04:42.161926 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m12:04:42.189165 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m12:04:42.334606 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m12:04:42.335624 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.9.0a1", "profile_name": "dbt_airbyte_etl", "target_name": "dev", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m12:04:42.336500 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:04:43.820903 [debug] [ThreadPool]: SQL status: SELECT 17 in 1.484 seconds
+[0m12:04:43.823892 [debug] [ThreadPool]: On list_postgres: Close
+[0m12:04:43.827826 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_postgres, now list_postgres_public)
+[0m12:04:43.839665 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m12:04:43.841202 [debug] [ThreadPool]: On list_postgres_public: BEGIN
+[0m12:04:43.842804 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:04:45.269970 [debug] [ThreadPool]: SQL status: BEGIN in 1.427 seconds
+[0m12:04:45.271668 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m12:04:45.272875 [debug] [ThreadPool]: On list_postgres_public: /* {"app": "dbt", "dbt_version": "1.9.0a1", "profile_name": "dbt_airbyte_etl", "target_name": "dev", "connection_name": "list_postgres_public"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m12:04:45.435689 [debug] [ThreadPool]: SQL status: SELECT 7 in 0.162 seconds
+[0m12:04:45.441012 [debug] [ThreadPool]: On list_postgres_public: ROLLBACK
+[0m12:04:45.597805 [debug] [ThreadPool]: On list_postgres_public: Close
+[0m12:04:45.619063 [debug] [MainThread]: Using postgres connection "master"
+[0m12:04:45.620534 [debug] [MainThread]: On master: BEGIN
+[0m12:04:45.621748 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:04:47.018648 [debug] [MainThread]: SQL status: BEGIN in 1.397 seconds
+[0m12:04:47.020679 [debug] [MainThread]: Using postgres connection "master"
+[0m12:04:47.022064 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.0a1", "profile_name": "dbt_airbyte_etl", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m12:04:47.187151 [debug] [MainThread]: SQL status: SELECT 4 in 0.164 seconds
+[0m12:04:47.192080 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd5011cdf-39a8-4f93-af36-e929f68fdcb4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f00daf88fa0>]}
+[0m12:04:47.192939 [debug] [MainThread]: On master: ROLLBACK
+[0m12:04:47.347042 [debug] [MainThread]: Using postgres connection "master"
+[0m12:04:47.349061 [debug] [MainThread]: On master: BEGIN
+[0m12:04:47.655326 [debug] [MainThread]: SQL status: BEGIN in 0.303 seconds
+[0m12:04:47.656245 [debug] [MainThread]: On master: COMMIT
+[0m12:04:47.656989 [debug] [MainThread]: Using postgres connection "master"
+[0m12:04:47.657625 [debug] [MainThread]: On master: COMMIT
+[0m12:04:47.809126 [debug] [MainThread]: SQL status: COMMIT in 0.151 seconds
+[0m12:04:47.810129 [debug] [MainThread]: On master: Close
+[0m12:04:47.811589 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m12:04:47.812607 [info ] [MainThread]: 
+[0m12:04:47.829722 [debug] [Thread-1 (]: Began running node model.dbt_airbyte_etl.dw_faturamento_ano
+[0m12:04:47.832106 [info ] [Thread-1 (]: 1 of 2 START sql view model public.dw_faturamento_ano .......................... [RUN]
+[0m12:04:47.844827 [debug] [Thread-2 (]: Began running node model.dbt_airbyte_etl.dw_faturamento_model
+[0m12:04:47.842266 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_postgres_public, now model.dbt_airbyte_etl.dw_faturamento_ano)
+[0m12:04:47.848049 [info ] [Thread-2 (]: 2 of 2 START sql view model public.dw_faturamento_model ........................ [RUN]
+[0m12:04:47.851410 [debug] [Thread-1 (]: Began compiling node model.dbt_airbyte_etl.dw_faturamento_ano
+[0m12:04:47.855294 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.dbt_airbyte_etl.dw_faturamento_model'
+[0m12:04:47.875873 [debug] [Thread-2 (]: Began compiling node model.dbt_airbyte_etl.dw_faturamento_model
+[0m12:04:47.879907 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_airbyte_etl.dw_faturamento_ano"
+[0m12:04:47.896226 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_airbyte_etl.dw_faturamento_model"
+[0m12:04:47.898699 [debug] [Thread-1 (]: Began executing node model.dbt_airbyte_etl.dw_faturamento_ano
+[0m12:04:47.906060 [debug] [Thread-2 (]: Began executing node model.dbt_airbyte_etl.dw_faturamento_model
+[0m12:04:48.092107 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_airbyte_etl.dw_faturamento_model"
+[0m12:04:48.091073 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_airbyte_etl.dw_faturamento_ano"
+[0m12:04:48.094361 [debug] [Thread-2 (]: Using postgres connection "model.dbt_airbyte_etl.dw_faturamento_model"
+[0m12:04:48.095822 [debug] [Thread-1 (]: Using postgres connection "model.dbt_airbyte_etl.dw_faturamento_ano"
+[0m12:04:48.096944 [debug] [Thread-2 (]: On model.dbt_airbyte_etl.dw_faturamento_model: BEGIN
+[0m12:04:48.098168 [debug] [Thread-1 (]: On model.dbt_airbyte_etl.dw_faturamento_ano: BEGIN
+[0m12:04:48.099702 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:04:48.102494 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:04:49.524985 [debug] [Thread-1 (]: SQL status: BEGIN in 1.422 seconds
+[0m12:04:49.526153 [debug] [Thread-1 (]: Using postgres connection "model.dbt_airbyte_etl.dw_faturamento_ano"
+[0m12:04:49.527352 [debug] [Thread-1 (]: On model.dbt_airbyte_etl.dw_faturamento_ano: /* {"app": "dbt", "dbt_version": "1.9.0a1", "profile_name": "dbt_airbyte_etl", "target_name": "dev", "node_id": "model.dbt_airbyte_etl.dw_faturamento_ano"} */
+
+  create view "postgres"."public"."dw_faturamento_ano__dbt_tmp"
+    
+    
+  as (
+    with dw_faturamento_ano as(
+    select 
+	    DATE_PART('year', purchased_at) AS "Ano"
+        ,sum(ap.price) AS "Faturamento"
+    from 
+	    public.airbyte_purchases pur 
+    inner join 
+	    airbyte_products ap
+    on pur.product_id = ap.id 
+    group by 1
+    order by 1
+)
+
+select * from dw_faturamento_ano
+  );
+[0m12:04:49.539706 [debug] [Thread-2 (]: SQL status: BEGIN in 1.440 seconds
+[0m12:04:49.541735 [debug] [Thread-2 (]: Using postgres connection "model.dbt_airbyte_etl.dw_faturamento_model"
+[0m12:04:49.543935 [debug] [Thread-2 (]: On model.dbt_airbyte_etl.dw_faturamento_model: /* {"app": "dbt", "dbt_version": "1.9.0a1", "profile_name": "dbt_airbyte_etl", "target_name": "dev", "node_id": "model.dbt_airbyte_etl.dw_faturamento_model"} */
+
+  create view "postgres"."public"."dw_faturamento_model__dbt_tmp"
+    
+    
+  as (
+    with dw_faturamento_model as(
+    select
+        pro.model as "Model",
+        sum(pro.price) AS "Faturamento"
+    from
+        public.airbyte_purchases pur
+    inner join public.airbyte_products pro on pur.product_id = pro.id
+    group by pro.model
+    order by sum(pro.price) desc
+)
+
+select * from dw_faturamento_model
+  );
+[0m12:04:49.686693 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.158 seconds
+[0m12:04:49.701443 [debug] [Thread-1 (]: Using postgres connection "model.dbt_airbyte_etl.dw_faturamento_ano"
+[0m12:04:49.702885 [debug] [Thread-1 (]: On model.dbt_airbyte_etl.dw_faturamento_ano: /* {"app": "dbt", "dbt_version": "1.9.0a1", "profile_name": "dbt_airbyte_etl", "target_name": "dev", "node_id": "model.dbt_airbyte_etl.dw_faturamento_ano"} */
+alter table "postgres"."public"."dw_faturamento_ano" rename to "dw_faturamento_ano__dbt_backup"
+[0m12:04:49.725649 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.180 seconds
+[0m12:04:49.737840 [debug] [Thread-2 (]: Using postgres connection "model.dbt_airbyte_etl.dw_faturamento_model"
+[0m12:04:49.741355 [debug] [Thread-2 (]: On model.dbt_airbyte_etl.dw_faturamento_model: /* {"app": "dbt", "dbt_version": "1.9.0a1", "profile_name": "dbt_airbyte_etl", "target_name": "dev", "node_id": "model.dbt_airbyte_etl.dw_faturamento_model"} */
+alter table "postgres"."public"."dw_faturamento_model" rename to "dw_faturamento_model__dbt_backup"
+[0m12:04:49.855585 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.152 seconds
+[0m12:04:49.863831 [debug] [Thread-1 (]: Using postgres connection "model.dbt_airbyte_etl.dw_faturamento_ano"
+[0m12:04:49.865738 [debug] [Thread-1 (]: On model.dbt_airbyte_etl.dw_faturamento_ano: /* {"app": "dbt", "dbt_version": "1.9.0a1", "profile_name": "dbt_airbyte_etl", "target_name": "dev", "node_id": "model.dbt_airbyte_etl.dw_faturamento_ano"} */
+alter table "postgres"."public"."dw_faturamento_ano__dbt_tmp" rename to "dw_faturamento_ano"
+[0m12:04:49.896487 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.154 seconds
+[0m12:04:49.905356 [debug] [Thread-2 (]: Using postgres connection "model.dbt_airbyte_etl.dw_faturamento_model"
+[0m12:04:49.908018 [debug] [Thread-2 (]: On model.dbt_airbyte_etl.dw_faturamento_model: /* {"app": "dbt", "dbt_version": "1.9.0a1", "profile_name": "dbt_airbyte_etl", "target_name": "dev", "node_id": "model.dbt_airbyte_etl.dw_faturamento_model"} */
+alter table "postgres"."public"."dw_faturamento_model__dbt_tmp" rename to "dw_faturamento_model"
+[0m12:04:50.019164 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.152 seconds
+[0m12:04:50.063539 [debug] [Thread-1 (]: On model.dbt_airbyte_etl.dw_faturamento_ano: COMMIT
+[0m12:04:50.065701 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.156 seconds
+[0m12:04:50.067754 [debug] [Thread-1 (]: Using postgres connection "model.dbt_airbyte_etl.dw_faturamento_ano"
+[0m12:04:50.072593 [debug] [Thread-2 (]: On model.dbt_airbyte_etl.dw_faturamento_model: COMMIT
+[0m12:04:50.073707 [debug] [Thread-1 (]: On model.dbt_airbyte_etl.dw_faturamento_ano: COMMIT
+[0m12:04:50.074670 [debug] [Thread-2 (]: Using postgres connection "model.dbt_airbyte_etl.dw_faturamento_model"
+[0m12:04:50.075987 [debug] [Thread-2 (]: On model.dbt_airbyte_etl.dw_faturamento_model: COMMIT
+[0m12:04:50.237764 [debug] [Thread-1 (]: SQL status: COMMIT in 0.162 seconds
+[0m12:04:50.244070 [debug] [Thread-2 (]: SQL status: COMMIT in 0.167 seconds
+[0m12:04:50.261299 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public"."dw_faturamento_ano__dbt_backup"
+[0m12:04:50.263840 [debug] [Thread-2 (]: Applying DROP to: "postgres"."public"."dw_faturamento_model__dbt_backup"
+[0m12:04:50.279307 [debug] [Thread-1 (]: Using postgres connection "model.dbt_airbyte_etl.dw_faturamento_ano"
+[0m12:04:50.282527 [debug] [Thread-2 (]: Using postgres connection "model.dbt_airbyte_etl.dw_faturamento_model"
+[0m12:04:50.287035 [debug] [Thread-1 (]: On model.dbt_airbyte_etl.dw_faturamento_ano: /* {"app": "dbt", "dbt_version": "1.9.0a1", "profile_name": "dbt_airbyte_etl", "target_name": "dev", "node_id": "model.dbt_airbyte_etl.dw_faturamento_ano"} */
+drop view if exists "postgres"."public"."dw_faturamento_ano__dbt_backup" cascade
+[0m12:04:50.289847 [debug] [Thread-2 (]: On model.dbt_airbyte_etl.dw_faturamento_model: /* {"app": "dbt", "dbt_version": "1.9.0a1", "profile_name": "dbt_airbyte_etl", "target_name": "dev", "node_id": "model.dbt_airbyte_etl.dw_faturamento_model"} */
+drop view if exists "postgres"."public"."dw_faturamento_model__dbt_backup" cascade
+[0m12:04:50.445253 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.153 seconds
+[0m12:04:50.454754 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.162 seconds
+[0m12:04:50.460919 [debug] [Thread-1 (]: On model.dbt_airbyte_etl.dw_faturamento_ano: Close
+[0m12:04:50.465341 [debug] [Thread-2 (]: On model.dbt_airbyte_etl.dw_faturamento_model: Close
+[0m12:04:50.473270 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd5011cdf-39a8-4f93-af36-e929f68fdcb4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f00d9589cf0>]}
+[0m12:04:50.476209 [info ] [Thread-1 (]: 1 of 2 OK created sql view model public.dw_faturamento_ano ..................... [[32mCREATE VIEW[0m in 2.63s]
+[0m12:04:50.477972 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd5011cdf-39a8-4f93-af36-e929f68fdcb4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f00daf3f2b0>]}
+[0m12:04:50.480324 [debug] [Thread-1 (]: Finished running node model.dbt_airbyte_etl.dw_faturamento_ano
+[0m12:04:50.482465 [info ] [Thread-2 (]: 2 of 2 OK created sql view model public.dw_faturamento_model ................... [[32mCREATE VIEW[0m in 2.62s]
+[0m12:04:50.492127 [debug] [Thread-2 (]: Finished running node model.dbt_airbyte_etl.dw_faturamento_model
+[0m12:04:50.510146 [debug] [MainThread]: Using postgres connection "master"
+[0m12:04:50.511464 [debug] [MainThread]: On master: BEGIN
+[0m12:04:50.513789 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m12:04:51.929427 [debug] [MainThread]: SQL status: BEGIN in 1.416 seconds
+[0m12:04:51.931172 [debug] [MainThread]: On master: COMMIT
+[0m12:04:51.932626 [debug] [MainThread]: Using postgres connection "master"
+[0m12:04:51.934071 [debug] [MainThread]: On master: COMMIT
+[0m12:04:52.101467 [debug] [MainThread]: SQL status: COMMIT in 0.166 seconds
+[0m12:04:52.102496 [debug] [MainThread]: On master: Close
+[0m12:04:52.104170 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:04:52.104949 [debug] [MainThread]: Connection 'model.dbt_airbyte_etl.dw_faturamento_ano' was properly closed.
+[0m12:04:52.105544 [debug] [MainThread]: Connection 'model.dbt_airbyte_etl.dw_faturamento_model' was properly closed.
+[0m12:04:52.106322 [info ] [MainThread]: 
+[0m12:04:52.107319 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 9.94 seconds (9.94s).
+[0m12:04:52.109488 [debug] [MainThread]: Command end result
+[0m12:04:52.216373 [info ] [MainThread]: 
+[0m12:04:52.218286 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:04:52.220030 [info ] [MainThread]: 
+[0m12:04:52.221624 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m12:04:52.226553 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 14.255012, "process_user_time": 7.800822, "process_kernel_time": 0.77605, "process_mem_max_rss": "120000", "process_in_blocks": "105112", "process_out_blocks": "2448"}
+[0m12:04:52.231053 [debug] [MainThread]: Command `dbt run` succeeded at 12:04:52.230216 after 14.26 seconds
+[0m12:04:52.232384 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f00ddccd9c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f00dd996950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f00dcd86830>]}
+[0m12:04:52.233512 [debug] [MainThread]: Flushing usage events
