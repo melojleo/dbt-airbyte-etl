@@ -1,0 +1,1 @@
+{"_invocation_id": "c8933e44-cc81-4ddb-966e-f54bb5dcbdb8", "linked": {"0": {"name": "model.dbt_airbyte_etl.dw_faturamento_ano", "type": "model"}, "1": {"name": "model.dbt_airbyte_etl.dw_faturamento_model", "type": "model"}}}

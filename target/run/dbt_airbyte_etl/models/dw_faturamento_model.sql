@@ -1,4 +1,9 @@
-with dw_faturamento_model as(
+
+  create view "postgres"."public"."dw_faturamento_model__dbt_tmp"
+    
+    
+  as (
+    with dw_faturamento_model as(
     select
         pro.model as "Model",
         sum(pro.price) AS "Faturamento"
@@ -10,3 +15,4 @@ with dw_faturamento_model as(
 )
 
 select * from dw_faturamento_model
+  );

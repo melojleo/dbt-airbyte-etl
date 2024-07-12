@@ -1,4 +1,9 @@
-with dw_faturamento_ano as(
+
+  create view "postgres"."public"."dw_faturamento_ano__dbt_tmp"
+    
+    
+  as (
+    with dw_faturamento_ano as(
     select 
 	    DATE_PART('year', purchased_at) AS "Ano"
         ,sum(ap.price) AS "Faturamento"
@@ -12,3 +17,4 @@ with dw_faturamento_ano as(
 )
 
 select * from dw_faturamento_ano
+  );
